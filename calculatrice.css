@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'spartan';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/Spartan-VariableFont_wght.ttf') format('ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(268, 75%, 9%);
+    font-family: 'spartan', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 380px;
+    height: 500px;
+    margin: 0;
+}
+
+.en-tete {
+    display: flex;
+    justify-content: space-between;
+    color: hsl(52, 100%, 62%);
+    margin-bottom: 20px;
+    transition: all 0.5s linear;
+}
+
+.en-tete h1 {
+    font-weight: bold;
+    font-size: 30px;
+    align-self: center;
+}
+
+.btn-theme {
+    display: flex;
+}
+
+.btn-theme h2 {
+    font-weight: bolder;
+    font-size: 12px;
+    align-self: center;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.les-themes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70px;
+}
+
+.les-themes span {
+    align-self: center;
+    letter-spacing: 5px;
+    font-size: 10px;
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: hsl(223, 31%, 20%);
+    height: 25px;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.bulles{
+    background-color: hsl(6, 63%, 50%);
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(5px);
+    transition: transform 0.2s linear;
+}
+#checktheme1 {
+    height: 100%;
+    opacity: 1;
+    margin-left: 0;
+    width: auto;
+
+
+}
+#checktheme2 {
+    height: 100%;
+    opacity: 1;
+    margin-left: 0;
+    width: auto;
+}
+#checktheme3 {
+    height: 100%;
+    opacity: 1;
+    margin-left: 0;
+    width: auto;
+}
+
+
+.display {
+    width: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: hsl(268, 71%, 12%);
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.5s linear;
+}
+#afficheur {
+    width: 100%;
+    height: 80px;
+    outline: none;
+    text-align: end;
+    background-color: transparent;
+    border: none;
+    color: hsl(52, 100%, 62%);
+    font-size: 26px;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.5s linear;
+    scroll-padding-right: 10px;
+}
+
+.les-corps {
+    display: flex;
+    background-color: hsl(268, 71%, 12%);
+    padding: 20px;
+    height: auto;
+    border-radius: 5px;
+    flex-direction: column;
+    transition: all 0.5s linear;
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.les-boutons,
+.les-boutons-operateur,
+.les-boutons-virgule {
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+    color: hsl(52, 100%, 62%);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: hsl(268, 47%, 21%);
+    cursor: pointer;
+    transition: all 0.5s linear;
+    width: auto;
+}
+
+#delete {
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: hsl(281, 89%, 26%);
+    cursor: pointer;
+    transition: all 0.5s linear;
+    width: auto;
+}
+
+.btn-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    grid-gap: 15px;
+    height: 40px;
+}
+
+#reset {
+    width: auto;
+    grid-column: 1;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: hsl(281, 89%, 26%);
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+#reponse {
+    width: auto;
+    grid-column: 2;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 0 0 hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: hsl(176, 100%, 44%);
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+@media (max-width: 469px) {
+    .container {
+        width: auto;
+        margin: 20px;
+    }
+}

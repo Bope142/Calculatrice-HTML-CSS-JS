@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./calculatrice.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+    <main class="container">
+      <div class="en-tete">
+        <h1>calc</h1>
+        <div class="btn-theme">
+          <h2>THEME</h2>
+          <div class="les-themes">
+            <span>1 2 3</span>
+            <div class="radio">
+              <span id="checktheme1">
+                </span>
+              <span id="checktheme2">
+                </span>
+              <span id="checktheme3">
+                </span>
+              <span class="bulles"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="display">
+      <input type="text" id="afficheur" readonly="readonly"   value="0">
+      </div>
+      <div class="les-corps">
+        <div class="btn">
+        <input type="button" class="les-boutons" value="7">
+        <input type="button" class="les-boutons" value="8">
+        <input type="button" class="les-boutons" value="9">
+        <input type="button" class="btn-function" value="DEL" id="delete">
+        <input type="button" class="les-boutons" value="4">
+        <input type="button" class="les-boutons" value="5">
+        <input type="button" class="les-boutons" value="6">
+        <input type="button" class="les-boutons-operateur" value="+">
+        <input type="button" class="les-boutons" value="1">
+        <input type="button" class="les-boutons" value="2">
+        <input type="button" class="les-boutons" value="3">
+        <input type="button" class="les-boutons-operateur"  value="-">
+        <input type="button" class="les-boutons-virgule" id="virgule" value=".">
+        <input type="button" class="les-boutons" value="0">
+        <input type="button" class="les-boutons-operateur" value="/">
+        <input type="button" class="les-boutons-operateur" value="*">
+        </div>
+        <div class="btn-footer">
+          <input type="button" class="btn-function" value="RESET" id="reset">
+          <input type="button" class="btn-function" value="=" id="reponse">
+        </div>
+      </div>
+    </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Norbert Yemuang Bope</a>.
+  </div>
+  <script src="theme-app.js"></script>
+<script src="calculatrice.js"></script>
+</body>
+</html>
