@@ -1,14 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: 'spartan';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/Spartan-VariableFont_wght.ttf') format('ttf');
+    src: url('/fonts/Spartan-VariableFont_wght.ttf');
 }
 
 * {
     margin: 0;
     padding: 0;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 body {
@@ -16,61 +26,98 @@ body {
     height: 100vh;
     background-color: hsl(268, 75%, 9%);
     font-family: 'spartan', cursive;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     width: 380px;
     height: 500px;
     margin: 0;
 }
 
 .en-tete {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     color: hsl(52, 100%, 62%);
     margin-bottom: 20px;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
 .en-tete h1 {
     font-weight: bold;
     font-size: 30px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .btn-theme {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .btn-theme h2 {
     font-weight: bolder;
     font-size: 12px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-top: 15px;
     margin-right: 5px;
 }
 
 .les-themes {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 70px;
 }
 
 .les-themes span {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     letter-spacing: 5px;
     font-size: 10px;
 }
 
 .radio {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: hsl(223, 31%, 20%);
     height: 25px;
@@ -83,8 +130,14 @@ body {
     padding: 10px;
     border-radius: 50%;
     position: absolute;
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px);
+    -webkit-transition: -webkit-transform 0.2s linear;
+    transition: -webkit-transform 0.2s linear;
+    -o-transition: transform 0.2s linear;
     transition: transform 0.2s linear;
+    transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 #checktheme1 {
     height: 100%;
@@ -116,6 +169,8 @@ body {
     border-radius: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 #afficheur {
@@ -129,23 +184,37 @@ body {
     font-size: 26px;
     font-weight: bolder;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     scroll-padding-right: 10px;
 }
 
 .les-corps {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: hsl(268, 71%, 12%);
     padding: 20px;
     height: auto;
     border-radius: 5px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
 .btn {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
     height: 250px;
@@ -158,12 +227,15 @@ body {
     outline: none;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+    -webkit-box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+            box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
     color: hsl(52, 100%, 62%);
     font-size: 20px;
     font-weight: bolder;
     background-color: hsl(268, 47%, 21%);
     cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     width: auto;
 }
@@ -172,52 +244,76 @@ body {
     outline: none;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+    -webkit-box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+            box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
     color: hsl(0, 0%, 100%);
     font-size: 20px;
     font-weight: bolder;
     background-color: hsl(281, 89%, 26%);
     cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
     width: auto;
 }
 
 .btn-footer {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     width: 100%;
     grid-gap: 15px;
     height: 40px;
 }
 
+.btn-footer > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.btn-footer > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
 #reset {
     width: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
     outline: none;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+    -webkit-box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+            box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
     color: hsl(0, 0%, 100%);
     font-size: 20px;
     font-weight: bolder;
     background-color: hsl(281, 89%, 26%);
     cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
 #reponse {
     width: auto;
+    -ms-grid-column: 2;
     grid-column: 2;
     outline: none;
     border-radius: 8px;
     border: none;
-    box-shadow: 0 3px 0 0 hsl(177, 92%, 70%);
+    -webkit-box-shadow: 0 3px 0 0 hsl(177, 92%, 70%);
+            box-shadow: 0 3px 0 0 hsl(177, 92%, 70%);
     color: hsl(198, 20%, 13%);
     font-size: 20px;
     font-weight: bolder;
     background-color: hsl(176, 100%, 44%);
     cursor: pointer;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 @media (max-width: 469px) {
